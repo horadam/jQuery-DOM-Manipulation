@@ -1,0 +1,55 @@
+ul {
+    list-style:none;
+    padding:0;
+    width: 400px;
+}
+
+li h4 {
+    background: black;
+    color: red;
+    padding:10px;
+    margin:0;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.content {
+    padding:0 10px;
+    border: 1px solid red;
+    height:0;
+    overflow:hidden;
+}
+
+.shown {
+    padding:0 10px;
+    border: 1px solid red;
+    animation-name: slideOpen;
+    animation-duration: 2s;
+}
+
+@keyframes slideOpen {
+    0% {
+        height: 0px;
+        display:none;
+        overflow:hidden;
+    }
+    100% {
+        height:160px;
+    }
+}
+
+.wrapUp {
+    animation-name: slideClosed;
+    animation-duration: 2s;
+}
+
+@keyframes slideClosed {
+    0% {
+        height: 160px;
+        overflow:hidden;
+    }
+    100% {
+        height:0px;
+        display:none;
+    }
+}
